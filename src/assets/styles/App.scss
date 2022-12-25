@@ -1,0 +1,32 @@
+$very-dark-blue: hsl(216, 12%, 8%);
+
+@font-face {
+    font-family: Overpass;
+    src: url('../fonts/Overpass-Regular.ttf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Overpass;
+    src: url('../fonts/Overpass-Bold.ttf');
+    font-weight: bold;
+}
+
+html {
+    font-size: 62.5%; // 10px
+}
+
+body, p, div,
+h1, h2, h3, h4, h5, h6 {
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    background-color: $very-dark-blue;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 1.5rem 'Overpass', sans-serif;
+}

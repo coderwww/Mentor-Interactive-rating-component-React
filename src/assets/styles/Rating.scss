@@ -1,0 +1,184 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$medium-grey-transparent: hsl(216, 12%, 54%, 0.10);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+@mixin radius($radius: 0) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+}
+
+.rating {
+    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 33rem;
+    min-height: 36rem;
+    padding: 2.5rem;
+    background-color: $dark-blue; 
+    @include radius(1.5rem);
+    font-size: 1.5rem;
+    color: $light-grey;
+    text-align: left;
+
+    &::before {
+        content: ' ';
+        display: block;
+        background: $medium-grey-transparent url('../images/icon-star.svg') no-repeat center center;
+        background-size: 35%;
+        box-sizing: border-box;
+        width: 4rem;
+        height: 4rem;
+        @include radius(50%);
+        margin-bottom: 2rem;
+    }
+
+    &--rated {
+        text-align: center;
+        &::before {
+            content: ' ';
+            display: block;
+            background: url('../images/illustration-thank-you.svg') no-repeat center center;
+            background-size: 14rem;
+            box-sizing: border-box;
+            width: 100%;
+            height: 11rem;
+            @include radius(0);
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.rating__header {
+    color: $white;
+    font-weight: 700;
+    font-size: 160%;
+    margin-bottom: 1.2rem;
+}
+
+.rating__text {
+    line-height: 1.5em;
+    margin-bottom: 1rem;
+    min-height: 8rem;
+    letter-spacing: -0.03em;
+    &--rated {
+        min-height: 0;
+        margin-bottom: 0;
+    }
+}
+
+.rating__form {
+    align-self:flex-end;
+}
+.rating__fieldset {
+    border: 0;
+    margin: 0 0 2rem 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2.2rem;
+    position: relative;
+    overflow: visible;
+}
+.rating__radio {
+    position: absolute;
+    top: -100rem;
+    opacity: 0;
+    &:checked + label {
+        background-color: $medium-grey;
+        color: $white;
+    }
+}
+.rating__radio-label {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 4rem;
+    height: 4rem;
+    @include radius(50%);
+    background-color: $medium-grey-transparent;
+    color: $light-grey;
+    text-align: center;
+    line-height: 1em;
+    font-weight: bold;
+    padding-top: 1.4rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    &:hover {
+        background-color: $orange;
+        color: $white;
+    }
+}
+.rating__submit-button {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 4.5rem;
+    background-color: $orange;
+    color: $white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.2rem;
+    padding-top: 1.4rem;
+    @include radius(2.2rem);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+    &:hover {
+        background-color: $white;
+        color: $orange;
+    }
+}
+.rating__submit {
+    position: absolute; 
+    top: -5rem;
+}
+
+.rating__result {
+    line-height: 1em;
+    letter-spacing: -0.03em;
+    color: $orange;
+    display: inline-block;
+    background-color: $medium-grey-transparent;
+    padding: 0.8rem 1.1rem 0.6rem;
+    @include radius(1em);
+    margin-bottom: 3rem;
+}
+
+
+@media only screen and (min-width: 60rem) {
+    .rating {
+        max-width: 41rem;
+        min-height: 41.5rem;
+        padding: 3.5rem;
+        @include radius(3rem);
+        &::before {
+            width: 5rem;
+            height: 5rem;
+            margin-bottom: 3rem;
+        }
+
+        &--rated::before {
+            width: 100%;
+            background-size: 16rem;
+            height: 13.5rem;
+        }
+    }
+    .rating__header {
+        font-size: 180%;
+    }
+    .rating__fieldset {
+        margin-bottom: 3rem;
+    }
+    .rating__radio-label {
+        width: 5rem;
+        height: 5rem;
+        padding-top: 1.9rem;
+    }
+}
