@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Mentor-Interactive-rating-component-React/static/css/main.25828a24.css",
+    "main.css": "/Mentor-Interactive-rating-component-React/static/css/main.c0d66cbb.css",
     "main.js": "/Mentor-Interactive-rating-component-React/static/js/main.7998adb8.js",
     "static/js/787.529cc97a.chunk.js": "/Mentor-Interactive-rating-component-React/static/js/787.529cc97a.chunk.js",
     "static/media/Overpass-Bold.ttf": "/Mentor-Interactive-rating-component-React/static/media/Overpass-Bold.b471ca5db1d8cda7853f.ttf",
@@ -8,12 +8,12 @@
     "static/media/illustration-thank-you.svg": "/Mentor-Interactive-rating-component-React/static/media/illustration-thank-you.d74a66b551b99ae110b5.svg",
     "index.html": "/Mentor-Interactive-rating-component-React/index.html",
     "static/media/icon-star.svg": "/Mentor-Interactive-rating-component-React/static/media/icon-star.12766a8d207af861a70f.svg",
-    "main.25828a24.css.map": "/Mentor-Interactive-rating-component-React/static/css/main.25828a24.css.map",
+    "main.c0d66cbb.css.map": "/Mentor-Interactive-rating-component-React/static/css/main.c0d66cbb.css.map",
     "main.7998adb8.js.map": "/Mentor-Interactive-rating-component-React/static/js/main.7998adb8.js.map",
     "787.529cc97a.chunk.js.map": "/Mentor-Interactive-rating-component-React/static/js/787.529cc97a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.25828a24.css",
+    "static/css/main.c0d66cbb.css",
     "static/js/main.7998adb8.js"
   ]
 }
